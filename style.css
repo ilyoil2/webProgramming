@@ -1,0 +1,66 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e0f7fa; /* 아쿠아 배경색 */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.choice-box {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  border: 2px solid #00bcd4; /* 아쿠아 테두리 */
+}
+
+.choice-box h2 {
+  margin-top: 0;
+  color: #00796b; /* 어두운 아쿠아 색상 텍스트 */
+}
+
+.image-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 10px;
+}
+
+.image-btn img {
+  width: 300px; /* 너비를 300px로 고정 */
+  height: 200px; /* 높이를 200px로 고정 */
+  object-fit: cover; /* 이미지가 고정된 크기에 맞게 조정됨 */
+  border-radius: 5px;
+}
+
+.path {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #00796b; /* 어두운 아쿠아 색상 텍스트 */
+}
+
+.image-btn {
+  position: relative; /* 부모 요소로부터 상대적으로 위치를 잡음 */
+  display: inline-block; /* 인라인 블록 요소로 변경 */
+}
+
+.image-btn:hover::after {
+  content: attr(data-season); /* 이미지 버튼에 data-season 속성을 사용하여 시즌의 이름을 나타내도록 함 */
+  display: block;
+  position: absolute; /* 부모 요소 기준으로 절대 위치를 잡음 */
+  top: 0; /* 부모 요소의 위쪽으로부터의 거리 */
+  right: 0; /* 부모 요소의 오른쪽으로부터의 거리 */
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  color: #000;
+}
