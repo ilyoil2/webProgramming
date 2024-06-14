@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가운데 사진 배치</title>
+    <link rel="stylesheet" href="style2.css">
+    <script>
+        window.addEventListener('DOMContentLoaded', (event) => {
+            const overlay = document.querySelector('.overlay');
+            overlay.addEventListener('mouseover', () => {
+                overlay.style.display = 'none';
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="image-container">
+            <img src="결과 이미지/그리스.jpeg" alt="가운데 사진">
+            <div class="overlay">그리스</div>
+        </div>
+    </div>
+</body>
+</html>
